@@ -1,16 +1,16 @@
-# OS-Freight Website v2
+# OS-Freight Website v2.1
 
-Statische, responsive Unternehmenswebsite für OS-Freight Solutions.
+Premium-Landingpage für OS-Freight Solutions.
 
-## Lokal testen
-Öffne `index.html` direkt oder starte einen lokalen Webserver:
+## Neu in 2.1
+- Transparenter Header mit Blur beim Scrollen
+- Scroll-Fortschrittsanzeige
+- Hero-Parallax
+- Glassmorphism- und Hover-Effekte
+- Schnellkontakt-Leiste am Desktop
+- Mobile WhatsApp-Schaltfläche
+- animierte Kennzahlen
+- optimierter mobiler Hero-Ausschnitt
 
-```bash
-python3 -m http.server 8080
-```
-
-Danach: `http://localhost:8080`
-
-## Netlify
-Publish directory: `.`
-Build command: leer
+## Deployment
+Alle Dateien direkt in den Root des GitHub-Repositories hochladen. Netlify veröffentlicht jeden Commit auf `main` automatisch.
