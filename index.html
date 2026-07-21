@@ -4,80 +4,163 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OS-Freight Solutions | Disposition, Frachtvermittlung & Beratung</title>
-  <meta name="description" content="OS-Freight Solutions in Möckmühl: externe Disposition zu fairen Konditionen, Frachtvermittlung und praxisnahe Beratung für Tank, Frigo/Koffer, Plane und Sonderfahrten.">
+  <meta name="description" content="OS-Freight Solutions aus Möckmühl: externe Disposition, Frachtvermittlung und Logistikberatung für Tank, Frigo/Koffer, Plane und Sonderfahrten.">
   <link rel="canonical" href="https://os-freight.de/">
-  <meta name="theme-color" content="#06111c">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,700;0,800;1,800&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#06111c;--bg2:#091827;--panel:#0b1927;--line:#263848;--text:#f6f8fb;--muted:#b9c3cc;--gold:#f4a900;--gold2:#ffc43b;--max:1460px}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text)}
-    a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 34px}.gold{color:var(--gold)}
-    header{position:sticky;top:0;z-index:50;background:rgba(4,12,20,.96);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(14px)}
-    .nav{height:80px;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand img{width:285px;max-height:56px;object-fit:cover;object-position:center;border-radius:3px}.links{display:flex;align-items:center;gap:34px;font-weight:700;font-size:14px}.links a{padding:30px 0;position:relative}.links a:hover,.links a.active{color:var(--gold)}.links a.active:after{content:"";position:absolute;left:0;right:0;bottom:16px;height:2px;background:var(--gold)}
-    .btn{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#07101a;font-weight:800;padding:15px 24px;border-radius:4px;border:1px solid var(--gold);text-transform:uppercase;font-size:14px;box-shadow:0 10px 25px rgba(244,169,0,.15)}.btn.ghost{background:rgba(5,13,22,.45);color:#fff}.btn:hover{transform:translateY(-1px)}
-    .menu{display:none;font-size:26px;background:none;border:0;color:#fff}
-    .hero{position:relative;min-height:640px;display:flex;align-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
-    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(90deg,#06111c 0%,#06111c 33%,rgba(6,17,28,.73) 52%,rgba(6,17,28,.12) 72%),url('assets/hero-truck.jpg');background-repeat:no-repeat;background-size:cover;background-position:center right}
-    .hero:after{content:"";position:absolute;inset:auto 0 0;height:165px;background:linear-gradient(transparent,#06111c)}
-    .hero-content{position:relative;z-index:2;width:52%;padding:72px 0 115px}.eyebrow{font-size:15px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:18px}.hero h1{font-family:Montserrat,sans-serif;font-size:56px;line-height:1.03;margin:0 0 22px;text-transform:uppercase;letter-spacing:-.025em}.hero p{font-size:19px;line-height:1.6;color:#eef2f5;max-width:640px;margin:0 0 30px}.actions{display:flex;gap:18px;flex-wrap:wrap}
-    .trust{position:absolute;left:0;right:0;bottom:18px;z-index:3}.trust-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0}.trust-item{display:flex;align-items:center;gap:14px;padding:12px 22px;border-right:1px solid rgba(255,255,255,.15)}.trust-item:last-child{border:0}.trust-icon{font-size:30px;color:var(--gold)}.trust-item strong{font-size:13px;text-transform:uppercase;display:block}.trust-item span{font-size:12px;color:var(--muted)}
-    section{padding:70px 0}.section-title{text-align:center;font-family:Montserrat,sans-serif;font-size:30px;text-transform:uppercase;margin:0 0 34px}.section-title:after{content:"";display:block;width:46px;height:3px;background:var(--gold);margin:12px auto}
-    .services{background:linear-gradient(180deg,#071521,#081725)}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:linear-gradient(145deg,rgba(17,34,49,.95),rgba(7,18,29,.95));border:1px solid #334352;border-radius:7px;padding:28px;min-height:260px;transition:.25s}.card:hover{transform:translateY(-5px);border-color:var(--gold)}.card-icon{font-size:40px;color:var(--gold);margin-bottom:16px}.card h3{text-transform:uppercase;font-size:17px;margin:0 0 12px}.card p,.card li{color:var(--muted);font-size:14px;line-height:1.7}.card ul{padding-left:18px}.more{display:inline-block;color:var(--gold);font-weight:800;font-size:13px;margin-top:16px;text-transform:uppercase}
-    .process{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}.step{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}.num{font-family:Montserrat;font-size:32px;color:var(--gold);font-weight:800}.step h4{text-transform:uppercase;margin:5px 0 8px}.step p{color:var(--muted);font-size:14px;line-height:1.6;margin:0}
-    .about{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}.about h2{font-family:Montserrat;font-size:40px;text-transform:uppercase;margin:0 0 20px}.about p{color:var(--muted);line-height:1.8}.facts{display:grid;grid-template-columns:1fr 1fr;gap:15px}.fact{border:1px solid var(--line);padding:22px;border-radius:6px;background:#091827}.fact b{font-size:22px;color:var(--gold);display:block;margin-bottom:6px}.fact span{color:var(--muted);font-size:13px}
-    .cta{padding:0 0 70px}.cta-box{border:1px solid #8c6413;background:linear-gradient(110deg,#0b1927 0%,#0d1c2a 65%,#d98f00 65%,#f4a900 100%);border-radius:8px;padding:32px 38px;display:flex;justify-content:space-between;align-items:center;gap:30px}.cta h3{font-size:23px;text-transform:uppercase;margin:0 0 8px}.cta p{margin:0;color:var(--muted)}
-    footer{border-top:1px solid var(--line);background:#040d15}.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px;padding:42px 34px}.foot img{width:260px}.foot h4{color:var(--gold);text-transform:uppercase;margin:0 0 12px}.foot p,.foot a{color:var(--muted);font-size:14px;line-height:1.8}.legal{border-top:1px solid var(--line);padding:18px 34px;color:#8795a0;font-size:12px;text-align:center}
-    .float{position:fixed;right:18px;bottom:24px;z-index:70;display:flex;flex-direction:column;gap:10px}.float a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#16c45b;font-size:25px;box-shadow:0 10px 25px rgba(0,0,0,.35)}.float a.phone{background:var(--gold);color:#06111c}
-    @media(max-width:1050px){.links{display:none}.menu{display:block}.hero-content{width:65%}.hero h1{font-size:46px}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.trust-row{grid-template-columns:1fr 1fr}.trust-item:nth-child(2){border-right:0}.hero{min-height:720px}}
-    @media(max-width:700px){.wrap{padding:0 20px}.nav{height:68px}.brand img{width:210px}.nav>.btn{display:none}.hero{min-height:760px;align-items:flex-start}.hero:before{background-image:linear-gradient(180deg,rgba(6,17,28,.35),#06111c 67%),url('assets/hero-truck.jpg');background-size:auto 53%,cover;background-position:72% top,center}.hero-content{width:100%;padding:330px 0 210px}.hero h1{font-size:37px}.hero p{font-size:16px}.trust{bottom:12px}.trust-row{grid-template-columns:1fr 1fr}.trust-item{padding:10px 4px;gap:8px}.trust-icon{font-size:23px}.cards,.steps,.facts{grid-template-columns:1fr}.cta-box{background:#0b1927;align-items:flex-start;flex-direction:column}.foot{grid-template-columns:1fr}.float{right:12px}.section-title{font-size:25px}}
-  </style>
+  <meta name="theme-color" content="#07111d">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#start"><img src="assets/logo.jpg" alt="OS-Freight.de"></a>
-    <nav class="links"><a class="active" href="#start">Startseite</a><a href="#leistungen">Leistungen</a><a href="#ueber-uns">Über uns</a><a href="#vorteile">Vorteile</a><a href="#ablauf">Ablauf</a><a href="#kontakt">Kontakt</a></nav>
-    <a class="btn" href="#kontakt">Kapazität anfragen →</a><button class="menu" aria-label="Menü">☰</button>
-  </div>
-</header>
-<main>
-<section class="hero" id="start">
-  <div class="wrap" style="width:100%">
-    <div class="hero-content">
-      <div class="eyebrow">Externe Disposition. Frachtvermittlung. Beratung.</div>
-      <h1>Logistik, die bewegt.<br><span class="gold">Lösungen, die verbinden.</span></h1>
-      <p>Wir übernehmen Ihre Disposition, vermitteln zuverlässige Frachtführer und finden die passende Lösung – schnell, persönlich und zu fairen Konditionen.</p>
-      <div class="actions"><a class="btn" href="#kontakt">Kapazität anfragen →</a><a class="btn ghost" href="#leistungen">Mehr erfahren</a></div>
+  <a class="skip-link" href="#main">Zum Inhalt</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="OS-Freight Startseite">
+        <span class="brand-os"><i>O</i><b>S</b></span>
+        <span class="brand-word">-FREIGHT<span>.DE</span></span>
+        <small>ANY <em>PROBLEM.</em> ONE <em>SOLUTION.</em></small>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
+        <a href="#top" class="active">Startseite</a>
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ueber-uns">Über uns</a>
+        <a href="#vorteile">Vorteile</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="btn btn-primary header-cta" href="#kontakt">Kapazität anfragen <span>→</span></a>
     </div>
-    <div class="trust"><div class="trust-row">
-      <div class="trust-item"><div class="trust-icon">◈</div><div><strong>Zuverlässig</strong><span>Direkte Verantwortung</span></div></div>
-      <div class="trust-item"><div class="trust-icon">◷</div><div><strong>Reaktionsschnell</strong><span>Kurze Entscheidungswege</span></div></div>
-      <div class="trust-item"><div class="trust-icon">⌖</div><div><strong>Deutschlandweit</strong><span>Europaweit vernetzt</span></div></div>
-      <div class="trust-item"><div class="trust-icon">▥</div><div><strong>Effizient</strong><span>Faire Konditionen</span></div></div>
-    </div></div>
-  </div>
-</section>
-<section class="services" id="leistungen"><div class="wrap"><h2 class="section-title">Unsere Leistungen</h2><div class="cards">
-  <article class="card"><div class="card-icon">◉</div><h3>Externe Disposition</h3><p>Wir übernehmen Ihre Disposition – von der Tourenplanung über die Fahrerkommunikation bis zur laufenden Transportüberwachung. Transparent, flexibel und zu festen, fairen Konditionen.</p><a class="more" href="#kontakt">Mehr erfahren →</a></article>
-  <article class="card"><div class="card-icon">▰</div><h3>Frachtvermittlung</h3><p>Wir bringen Auftraggeber und geeignete Frachtführer zusammen und koordinieren passende Kapazitäten für planbare wie kurzfristige Transportanforderungen.</p><a class="more" href="#kontakt">Mehr erfahren →</a></article>
-  <article class="card"><div class="card-icon">✣</div><h3>Beratung</h3><p>Wir analysieren Abläufe, erkennen operative Engpässe und entwickeln praxisnahe, wirtschaftliche Lösungen für Ihre Transport- und Dispositionsprozesse.</p><a class="more" href="#kontakt">Mehr erfahren →</a></article>
-  <article class="card"><div class="card-icon">▱</div><h3>Fahrzeugtypen</h3><ul><li>Tankauflieger</li><li>Frigo / Koffer</li><li>Plane</li><li>Sonderfahrten</li></ul><a class="more" href="#kontakt">Kapazität anfragen →</a></article>
-</div></div></section>
-<section class="process" id="ablauf"><div class="wrap"><h2 class="section-title">So arbeiten wir</h2><div class="steps">
-  <div class="step"><div class="num">01</div><div><h4>Anfrage</h4><p>Sie schildern uns Ihren Bedarf oder Ihre Herausforderung.</p></div></div>
-  <div class="step"><div class="num">02</div><div><h4>Analyse</h4><p>Wir prüfen Kapazitäten, Rahmenbedingungen und entwickeln die passende Lösung.</p></div></div>
-  <div class="step"><div class="num">03</div><div><h4>Umsetzung</h4><p>Wir koordinieren Fahrer, Fahrzeuge und die gesamte Kommunikation.</p></div></div>
-  <div class="step"><div class="num">04</div><div><h4>Abwicklung</h4><p>Ihr Transport wird zuverlässig, termingerecht und professionell begleitet.</p></div></div>
-</div></div></section>
-<section id="ueber-uns"><div class="wrap about"><div><div class="eyebrow gold">OS-Freight Solutions</div><h2>Ihr externer Partner für Transport und Logistik.</h2><p>OS-Freight Solutions, geführt von Stefan Oswald, unterstützt Frachtführer, Speditionen und Auftraggeber mit operativer Disposition, zuverlässiger Frachtvermittlung und praxisnaher Beratung.</p><p>Der Fokus liegt auf direkter Kommunikation, verlässlicher Abwicklung und fair kalkulierten Konditionen. Keine anonyme Hotline, sondern ein persönlicher Ansprechpartner, der Verantwortung übernimmt.</p></div><div class="facts" id="vorteile"><div class="fact"><b>Persönlich</b><span>Direkter Ansprechpartner ohne Umwege</span></div><div class="fact"><b>Fair</b><span>Klare und nachvollziehbare Konditionen</span></div><div class="fact"><b>Praxisnah</b><span>Erfahrung aus dem operativen Tagesgeschäft</span></div><div class="fact"><b>Flexibel</b><span>Unterstützung passend zu Ihrem Bedarf</span></div></div></div></section>
-<section class="cta" id="kontakt"><div class="wrap"><div class="cta-box"><div><h3>Benötigen Sie Transportkapazitäten oder Unterstützung in Ihrer Disposition?</h3><p>Wir sind für Sie da – schnell, persönlich und unkompliziert.</p></div><a class="btn ghost" href="mailto:info@os-freight.de?subject=Anfrage%20über%20OS-Freight.de">Jetzt anfragen →</a></div></div></section>
-</main>
-<footer><div class="wrap foot"><div><img src="assets/logo.jpg" alt="OS-Freight.de"><p>OS-Freight Solutions (Stefan Oswald)<br>Externe Disposition · Frachtvermittlung · Beratung</p></div><div><h4>Kontakt</h4><p><a href="tel:+491781184007">+49 178 / 1184007</a><br><a href="mailto:info@os-freight.de">info@os-freight.de</a><br>74219 Möckmühl</p></div><div><h4>Leistungen</h4><p>Tankauflieger<br>Frigo / Koffer<br>Plane<br>Sonderfahrten</p></div></div><div class="legal">© 2026 OS-Freight Solutions · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></div></footer>
-<div class="float"><a class="phone" href="tel:+491781184007" aria-label="Anrufen">☎</a><a href="https://wa.me/491781184007" aria-label="WhatsApp">◉</a></div>
-<script>
-  const menu=document.querySelector('.menu'),links=document.querySelector('.links');
-  menu?.addEventListener('click',()=>{links.style.display=links.style.display==='flex'?'none':'flex';links.style.position='absolute';links.style.top='68px';links.style.left='0';links.style.right='0';links.style.padding='18px 24px';links.style.background='#06111c';links.style.flexDirection='column';links.style.alignItems='flex-start'});
-</script>
-</body></html>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-content reveal">
+        <p class="eyebrow">Externe Disposition. Frachtvermittlung. Beratung.</p>
+        <h1>Logistik, die bewegt.<br><span>Lösungen, die verbinden.</span></h1>
+        <p class="lead">Wir übernehmen Ihre Disposition, vermitteln zuverlässige Frachtführer und finden die passende Lösung – schnell, persönlich und zu fairen Konditionen.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#kontakt">Kapazität anfragen <span>→</span></a>
+          <a class="btn btn-ghost" href="#leistungen">Mehr erfahren</a>
+        </div>
+      </div>
+      <div class="container trust-row reveal">
+        <div><span class="trust-icon">✓</span><p><b>Zuverlässig</b><small>Verbindliche Absprachen</small></p></div>
+        <div><span class="trust-icon">24/7</span><p><b>Direkt erreichbar</b><small>Kurze Reaktionszeiten</small></p></div>
+        <div><span class="trust-icon">◎</span><p><b>Deutschlandweit</b><small>Europaweit vernetzt</small></p></div>
+        <div><span class="trust-icon">↗</span><p><b>Effizient</b><small>Passende Lösungen</small></p></div>
+      </div>
+    </section>
+
+    <section id="leistungen" class="section services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span>Leistungen</span>
+          <h2>Was wir für Sie übernehmen</h2>
+          <p>Modular, klar kalkuliert und auf Ihren tatsächlichen Bedarf zugeschnitten.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="icon">◉</div>
+            <h3>Externe Disposition</h3>
+            <p>Tourenplanung, Fahrerkommunikation, Sendungsverfolgung und laufende Abstimmung – zu festen und vor allem fairen Konditionen.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="icon">▣</div>
+            <h3>Frachtvermittlung</h3>
+            <p>Wir bringen Auftraggeber und geeignete Frachtführer zusammen und koordinieren Kapazitäten zuverlässig.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="icon">✦</div>
+            <h3>Beratung</h3>
+            <p>Praxisnahe Unterstützung bei Abläufen, Auslastung, Kommunikation und wirtschaftlicher Tourensteuerung.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="icon">▰</div>
+            <h3>Fahrzeugtypen</h3>
+            <ul>
+              <li>Tankauflieger</li>
+              <li>Frigo / Koffer</li>
+              <li>Plane</li>
+              <li>Sonderfahrten</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ablauf" class="section process">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span>Ablauf</span>
+          <h2>So arbeiten wir</h2>
+        </div>
+        <div class="process-grid">
+          <article class="reveal"><strong>01</strong><h3>Anfrage</h3><p>Sie schildern uns Ihren Bedarf oder Ihre Herausforderung.</p></article>
+          <article class="reveal"><strong>02</strong><h3>Analyse</h3><p>Wir prüfen Kapazitäten und entwickeln die passende Lösung.</p></article>
+          <article class="reveal"><strong>03</strong><h3>Umsetzung</h3><p>Wir koordinieren Fahrer, Fahrzeuge und die gesamte Kommunikation.</p></article>
+          <article class="reveal"><strong>04</strong><h3>Abwicklung</h3><p>Der Auftrag wird verlässlich, transparent und professionell umgesetzt.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="vorteile" class="section benefits">
+      <div class="container benefits-grid">
+        <div class="benefit-copy reveal">
+          <span class="kicker">Warum OS-Freight</span>
+          <h2>Persönlich statt anonym. Flexibel statt starr.</h2>
+          <p>Sie erhalten einen direkten Ansprechpartner, klare Kommunikation und Leistungen, die zu Ihrem Betrieb passen – ohne unnötige Strukturen.</p>
+        </div>
+        <div class="benefit-list reveal">
+          <div><b>Feste Konditionen</b><span>Planbar und transparent</span></div>
+          <div><b>Direkte Kommunikation</b><span>Kurze Wege, schnelle Antworten</span></div>
+          <div><b>Operative Erfahrung</b><span>Praxisnah und lösungsorientiert</span></div>
+          <div><b>Flexible Unterstützung</b><span>Für Tagesgeschäft und Engpässe</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ueber-uns" class="section about">
+      <div class="container about-grid">
+        <div class="about-mark reveal">OS</div>
+        <div class="reveal">
+          <span class="kicker">Über uns</span>
+          <h2>OS-Freight Solutions</h2>
+          <p>OS-Freight Solutions, geführt von Stefan Oswald in 74219 Möckmühl, unterstützt Frachtführer, Speditionen und Auftraggeber bei Disposition, Frachtvermittlung und Beratung.</p>
+          <p>Unser Anspruch: belastbare Lösungen, faire Konditionen und eine Zusammenarbeit auf Augenhöhe.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section contact">
+      <div class="container contact-panel reveal">
+        <div>
+          <span class="kicker">Kontakt</span>
+          <h2>Benötigen Sie Kapazitäten oder Unterstützung in der Disposition?</h2>
+          <p>Rufen Sie direkt an, schreiben Sie per WhatsApp oder senden Sie eine E-Mail.</p>
+        </div>
+        <div class="contact-actions">
+          <a href="tel:+491781184007" class="contact-link"><b>Telefon</b><span>+49 178 1184007</span></a>
+          <a href="https://wa.me/491781184007" class="contact-link" target="_blank" rel="noopener"><b>WhatsApp</b><span>Nachricht senden</span></a>
+          <a href="mailto:info@os-freight.de" class="contact-link"><b>E-Mail</b><span>info@os-freight.de</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a class="floating-whatsapp" href="https://wa.me/491781184007" target="_blank" rel="noopener" aria-label="WhatsApp öffnen">WA</a>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><b>OS-Freight Solutions</b><small>Stefan Oswald · 74219 Möckmühl</small></div>
+      <div><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></div>
+      <div><a href="tel:+491781184007">+49 178 1184007</a><a href="mailto:info@os-freight.de">info@os-freight.de</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
