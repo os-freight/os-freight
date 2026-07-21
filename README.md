@@ -1,16 +1,11 @@
-# OS-Freight Website v2.1
+# OS-Freight Website v3
 
-Premium-Landingpage für OS-Freight Solutions.
+Responsive statische Unternehmenswebsite für OS-Freight Solutions.
 
-## Neu in 2.1
-- Transparenter Header mit Blur beim Scrollen
-- Scroll-Fortschrittsanzeige
-- Hero-Parallax
-- Glassmorphism- und Hover-Effekte
-- Schnellkontakt-Leiste am Desktop
-- Mobile WhatsApp-Schaltfläche
-- animierte Kennzahlen
-- optimierter mobiler Hero-Ausschnitt
+## Veröffentlichung
+Den gesamten Inhalt dieses Ordners direkt in das GitHub-Repository hochladen. Netlify veröffentlicht automatisch vom `main`-Branch.
 
-## Deployment
-Alle Dateien direkt in den Root des GitHub-Repositories hochladen. Netlify veröffentlicht jeden Commit auf `main` automatisch.
+## Vor Livegang ergänzen
+- vollständige Straßenanschrift
+- rechtlich geprüfte Angaben in Impressum und Datenschutz
+- gegebenenfalls Umsatzsteuer-ID und Aufsichtsbehörde

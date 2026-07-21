@@ -1,40 +1,9 @@
-const toggle=document.querySelector('.menu-toggle');
-const nav=document.querySelector('.main-nav');
-if(toggle&&nav){
-  toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});
-  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
-}
-
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
-const links=[...document.querySelectorAll('.main-nav a')];
-const sections=[...document.querySelectorAll('main section[id],#top')];
-const header=document.querySelector('.site-header');
-const heroMedia=document.querySelector('.hero-media');
-const progress=document.querySelector('.page-progress');
-
-function onScroll(){
-  const y=window.scrollY;
-  header?.classList.toggle('scrolled',y>24);
-  let current='top';
-  for(const s of sections){if(y>=(s.offsetTop-160))current=s.id||'top';}
-  links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')===`#${current}`));
-  const max=document.documentElement.scrollHeight-window.innerHeight;
-  if(progress)progress.style.width=`${max>0?(y/max)*100:0}%`;
-  if(heroMedia&&window.innerWidth>780&&matchMedia('(prefers-reduced-motion: no-preference)').matches){
-    heroMedia.style.transform=`scale(${1.04+Math.min(y,500)/10000}) translateY(${Math.min(y,500)*0.08}px)`;
-  }
-}
-window.addEventListener('scroll',onScroll,{passive:true});
-onScroll();
-
-const counters=document.querySelectorAll('[data-count]');
-const counterObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
-  if(!entry.isIntersecting)return;
-  const el=entry.target; const target=Number(el.dataset.count||0); const suffix=target===100?'%':'';
-  const start=performance.now(); const duration=800;
-  function tick(now){const p=Math.min((now-start)/duration,1);el.textContent=Math.round(target*(1-Math.pow(1-p,3)))+suffix;if(p<1)requestAnimationFrame(tick)}
-  requestAnimationFrame(tick); counterObserver.unobserve(el);
-}),{threshold:.6});
-counters.forEach(el=>counterObserver.observe(el));
+const $=(s,c=document)=>c.querySelector(s);const $$=(s,c=document)=>[...c.querySelectorAll(s)];
+const header=$('.site-header'),progress=$('.scroll-progress'),heroMedia=$('.hero-media'),toggle=$('.menu-toggle'),nav=$('.main-nav');
+if(toggle&&nav){toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});$$('a',nav).forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));}
+const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}}),{threshold:.12});$$('.reveal').forEach(el=>revealObserver.observe(el));
+const timeline=$('.timeline');if(timeline){const timelineObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){$('.timeline-line',timeline)?.classList.add('active');timelineObserver.disconnect();}}),{threshold:.25});timelineObserver.observe(timeline);}
+const navLinks=$$('.main-nav a');const targets=$$('main section[id],#top');
+function onScroll(){const y=window.scrollY;header?.classList.toggle('scrolled',y>18);const max=document.documentElement.scrollHeight-window.innerHeight;if(progress)progress.style.width=`${max>0?(y/max)*100:0}%`;let current='top';targets.forEach(s=>{if(y>=s.offsetTop-170)current=s.id||'top';});navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')===`#${current}`));if(heroMedia&&innerWidth>820&&matchMedia('(prefers-reduced-motion: no-preference)').matches){const limited=Math.min(y,650);heroMedia.style.transform=`scale(${1.035+limited/15000}) translateY(${limited*.045}px)`;}}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const year=$('#year');if(year)year.textContent=new Date().getFullYear();
