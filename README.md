@@ -1,11 +1,14 @@
-# OS-Freight Website v3
+# OS-Freight V4
 
-Responsive statische Unternehmenswebsite für OS-Freight Solutions.
+Alle Dateien direkt in das Hauptverzeichnis des GitHub-Repositories hochladen.
 
-## Veröffentlichung
-Den gesamten Inhalt dieses Ordners direkt in das GitHub-Repository hochladen. Netlify veröffentlicht automatisch vom `main`-Branch.
+Enthalten:
+- index.html
+- styles.css
+- main.js
+- hero-truck.webp
+- impressum.html
+- datenschutz.html
+- netlify.toml
 
-## Vor Livegang ergänzen
-- vollständige Straßenanschrift
-- rechtlich geprüfte Angaben in Impressum und Datenschutz
-- gegebenenfalls Umsatzsteuer-ID und Aufsichtsbehörde
+Danach in GitHub `Commit changes` ausführen. Netlify deployt automatisch.
